@@ -1,0 +1,227 @@
+/* Головний колір фону -- #FFFFFF; */
+/* Другорядний колір фону -- #F7F7F7; */
+/* Колір головних заголовків -- #FFFFFF; */
+/* Колір другорядних заголовків -- #303030; */
+/* Акцент -- #FF6C00; */
+/* Головний колір тексту -- #555555; */
+/* Другорядний колір тексту -- #303030; */
+/* Білий колір -- #FFFFFF; */
+/* Сірий колір -- #9DA4BD */
+
+
+/* Глобальні змінні */
+:root {
+  --accent: #FF6C00;
+  --primary-bg-color: #FFFFFF;
+  --secondary-bg-color: #F7F7F7;
+  --primary-title-color: #FFFFFF;
+  --secondary-title-color: #303030;
+  --primary-text-color: #555555;
+  --secondary-text-color: #303030;
+  --white-color: #FFFFFF;
+  --gray-color: #9DA4BD;
+}
+
+
+/* Reset */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ----Common---- */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  background-color: teal;
+}
+
+.nav-list .link {
+  color: var(--white-color);
+}
+
+.nav-list .link:hover,
+.nav-list .link:focus {
+  color: var(--accent);
+}
+
+.contacts-list .link {
+  color: var(--white-color);
+}
+
+.contacts-list .link:hover,
+.contacts-list .link:focus {
+  color: var(--accent);
+}
+
+.registration-link {
+  border: 1px solid var(--accent);
+}
+
+.registration-link.primary {
+  color: var(--white-color);
+}
+
+.registration-link.secondary {
+  color: var(--secondary-text-color);
+}
+
+.registration-link:hover,
+.registration-link:focus {
+  color: var(--accent);
+}
+
+.title {}
+
+.title.primary {
+  color: var(--primary-title-color);
+}
+
+.title.secondary {
+  color: var(--secondary-title-color);
+}
+
+
+
+/* ----Hero---- */
+.hero {
+  background-color: pink;
+}
+
+.hero-list .link {
+  color: var(--secondary-title-color);
+}
+
+.hero-list .link:hover,
+.hero-list .link:focus {
+  color: var(--accent);
+}
+
+.hero .pre-text {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero .after-text {
+  color: var(--gray-color);
+}
+
+
+/* ----About---- */
+.about .pre-text {
+  color: var(--secondary-text-color);
+}
+
+.about .after-text {}
+
+
+/* ----Price---- */
+.price {
+  background-color: yellowgreen;
+}
+
+.price .pre-text {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.price .text {
+  color: var(--gray-color);
+}
+
+
+/* ----Advantages---- */
+.advantages-list .number,
+.advantages-list .text {
+  color: var(--secondary-text-color);
+}
+
+.advantages .pre-text {
+  color: var(--secondary-text-color);
+}
+
+
+/* ----Masters---- */
+.masters .pre-text {
+  color: var(--secondary-text-color);
+}
+
+.masters-list .item-title {
+  color: var(--secondary-title-color);
+}
+
+.masters-list .item-text {
+  color: var(--accent);
+}
+
+
+/* ----Registration---- */
+.registration {
+  background-color: aqua;
+}
+
+
+/* ----Contacts---- */
+.contacts {
+  background-color: aquamarine;
+}
+
+.address-list .link {
+  color: var(--gray-color);
+  font-style: normal;
+}
+
+.contacts .pre-text {
+  color: var(--white-color);
+}
+
+.contacts .after-text {
+  color: var(--gray-color);
+}
+
+
+/* ----Footer---- */
+.page-footer .text {
+  color: var(--gray-color);
+}
+
+.footer-list .link {
+  color: var(--secondary-text-color);
+}
