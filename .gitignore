@@ -130,3 +130,4 @@ dist
 .pnp.*
 .prettierrc.json
 .DS_Store
+.vscode/settings.json
