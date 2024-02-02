@@ -300,8 +300,24 @@
     <div class="contact-wrap">
       <div class="container">
         <!-- Секція Онлфйн-запис -->
-        <section class="section registration" id="registration">
+        <section class="section online" id="registration">
           <h2 class="title primary">Онлайн-запис</h2>
+          <form class="online-form">
+            <div role="group" class="online-inputs">
+              <div class="online-field">
+                <input type="text" name="online-name" id="online-name" placeholder=" " class="online-input">
+                <label for="online-name" class="online-label">імʼя*</label>
+              </div>
+              <div class="online-field">
+                <input type="tel" name="online-tel" id="online-tel" placeholder=" " class="online-input">
+                <label for="online-tel" class="online-label">телефон*</label>
+              </div>
+            </div>
+            <div class="online-comment-field">
+              <textarea name="online-comment" placeholder="повідомлення" class="online-comment"></textarea>
+            </div>
+            <button type="submit" class="online-btn">відправити</button>
+          </form>
         </section>
         <!-- Секція Контакти -->
         <section class="section contacts" id="contacts">
@@ -391,8 +407,8 @@
               </svg>
             </span>
             Погоджуюсь з розсилкою та приймаю <a href="https://github.com/andrusenkoam?tab=repositories" target="_blank"
-              class="policy-link">Умови
-              договору</a></label>
+              class="policy-link">Умови договору</a>
+          </label>
         </div>
         <button type="submit" class="modal-btn">Відправити</button>
       </form>
