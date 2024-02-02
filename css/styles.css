@@ -923,25 +923,26 @@ img {
   justify-content: center;
   text-align: center;
   font-size: 14px;
-  overflow: hidden;
 }
 
-.policy-label::before {
-  content: "";
+.policy-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 15px;
   margin-right: 8px;
   border: 2px solid #212121;
   border-radius: 4px;
+  background-origin: border-box;
+  fill: transparent;
+  transition: fill 250ms ease, background-color 250ms ease, border 250ms ease;
 }
 
-.policy-input:checked+.policy-label::before {
-  background-color: var(--accent);
-  background-image: url(../images/modal/icon-modal-check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.policy-input:checked+.policy-label>.policy-icon {
   border: transparent;
+  background-color: var(--accent);
+  fill: #ffffff;
 }
 
 .policy-link {
