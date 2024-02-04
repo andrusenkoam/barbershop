@@ -1,0 +1,92 @@
+.masters {
+  background-color: $secondary-bg-color;
+}
+
+.masters-pre-title {
+  @extend %pre-title;
+  margin-bottom: 20px;
+  color: $secondary-text-color;
+}
+
+.masters .secondary-title {
+  margin-bottom: 44px;
+}
+
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.masters-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.masters-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.masters-cover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 40px;
+  background-color: rgba(255, 106, 0, 0.565);
+  color: $white-color;
+  font-weight: 600;
+  line-height: 1.4;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+
+  .masters-item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.masters-item-title {
+  margin-top: 30px;
+  color: $secondary-text-color;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.36px;
+}
+
+.masters-item-text {
+  margin-top: 8px;
+  color: $accent;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.28px;
+}
+
+.masters-soc-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.masters-soc-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.masters-soc-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $primary-bg-color;
+  fill: $secondary-text-color;
+  transition: fill 250ms ease;
+
+  &:hover,
+  &:focus {
+    fill: $accent;
+  }
+}

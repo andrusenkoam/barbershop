@@ -1,0 +1,77 @@
+.contacts {
+  width: calc(50% - 15px);
+  padding-left: 100px;
+
+  .primary-title {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+  font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  color: $gray-color;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    vertical-align: middle;
+  }
+
+  &.icon-map::before {
+    background-image: url(../images/contacts/icon-map-pin.svg);
+  }
+
+  &.icon-phone::before {
+    background-image: url(../images/contacts/icon-phone.svg);
+  }
+
+  &.icon-mail::before {
+    background-image: url(../images/contacts/icon-mail.svg);
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+}
+
+.contacts-time-title {
+  display: inline-flex;
+  align-items: center;
+  color: $white-color;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: rgba(157, 164, 189, 0.4);
+  }
+}
+
+.contacts-time-text {
+  margin-top: 20px;
+  color: $gray-color;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+}

@@ -1,0 +1,52 @@
+body {
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+  font-family: $text-font;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 130px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.primary-btn {
+  @extend %btn;
+  color: $white-color;
+}
+
+.secondary-btn {
+  @extend %btn;
+  color: $secondary-text-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+  }
+}
+
+.primary-title {
+  @extend %title;
+  color: $primary-title-color;
+}
+
+.secondary-title {
+  @extend %title;
+  color: $secondary-title-color;
+}
+
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+}

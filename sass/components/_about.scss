@@ -1,0 +1,35 @@
+.about .container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  flex-shrink: 0;
+  column-gap: 30px;
+}
+
+.about-content {
+  margin-left: 64px;
+}
+
+.about-pre-title {
+  @extend %pre-title;
+  margin-bottom: 20px;
+  color: $secondary-text-color;
+}
+
+.about .secondary-title {
+  margin-bottom: 20px;
+}
+
+.about-after-title {
+  @extend .after-title;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.28px;
+}

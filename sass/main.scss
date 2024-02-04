@@ -1,0 +1,25 @@
+// Common styles
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './base/reset';
+@import './base/common';
+
+// Header styles
+@import './components/page-header';
+
+// Sections styles
+@import './components/hero';
+@import './components/about';
+@import './components/prices';
+@import './components/reasons';
+@import './components/masters';
+@import './components/gallery';
+@import './components/online';
+@import './components/contacts';
+
+// Footer styles
+@import './components/page-footer';
+
+// Modal styles
+@import './components/modal';
