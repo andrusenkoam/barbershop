@@ -126,10 +126,6 @@
 }
 
 .mob-menu {
-  @include min-tablet {
-    display: none;
-  }
-
   position: absolute;
   top: 0;
   right: 0;
@@ -140,10 +136,14 @@
   height: 100%;
   padding-top: 100px;
   padding-right: 5px;
-  padding-bottom: 100px;
+  padding-bottom: 48px;
   padding-left: 60px;
   background-color: #ffffff;
   overflow: auto;
+
+  @include min-tablet {
+    display: none;
+  }
 }
 
 .menu-close-btn {
@@ -161,6 +161,10 @@
   &:focus {
     fill: $accent;
   }
+}
+
+.mob-menu-list {
+  margin-bottom: 24px;
 }
 
 .mob-menu-item {

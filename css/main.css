@@ -318,7 +318,7 @@ a {
   height: 100%;
   padding-top: 100px;
   padding-right: 5px;
-  padding-bottom: 100px;
+  padding-bottom: 48px;
   padding-left: 60px;
   background-color: #ffffff;
   overflow: auto;
@@ -342,6 +342,10 @@ a {
 }
 .menu-close-btn:hover, .menu-close-btn:focus {
   fill: #ff6c00;
+}
+
+.mob-menu-list {
+  margin-bottom: 24px;
 }
 
 .mob-menu-item:not(:first-child) {
