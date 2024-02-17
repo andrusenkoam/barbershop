@@ -1,26 +1,78 @@
 .reasons .container {
-  display: flex;
-  padding-left: 125px;
+  @include min-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include desctop {
+    flex-direction: row-reverse;
+    padding-left: 125px;
+  }
+}
+
+.reasons-content {
+  @include max-tablet {
+    margin-bottom: 44px;
+  }
+
+  @include desctop {
+    margin-left: 130px;
+    padding-top: 9px;
+  }
+}
+
+.reasons-pre-title {
+  @extend %pre-title;
+  margin-bottom: 20px;
+  color: $secondary-text-color;
+}
+
+.reasons-content .secondary-title {
+  margin-bottom: 20px;
+
+  @include min-tablet {
+    width: 412px;
+  }
+}
+
+.reasons-content .after-title {
+  max-width: 500px;
 }
 
 .reasons-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 370px;
+  @include min-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    align-self: flex-end;
+  }
 }
 
 .reasons-item {
   padding: 20px 24px;
-  width: 170px;
+  width: 100%;
   height: 133px;
   background-color: $secondary-bg-color;
 
-  &:nth-child(odd) {
-    margin-right: 30px;
+  @include max-mobile {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
   }
 
-  &:nth-child(even) {
-    margin-top: 30px;
+  @include min-tablet {
+    width: 170px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(even) {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -50,24 +102,4 @@
   font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-}
-
-.reasons-content {
-  margin-left: 130px;
-  padding-top: 9px;
-}
-
-.reasons-pre-title {
-  @extend %pre-title;
-  margin-bottom: 20px;
-  color: $secondary-text-color;
-}
-
-.reasons-content .secondary-title {
-  margin-bottom: 20px;
-  width: 412px;
-}
-
-.reasons-content .after-title {
-  max-width: 500px;
 }

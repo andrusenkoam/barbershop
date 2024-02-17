@@ -6,6 +6,14 @@
   height: 100%;
   background-color: rgba(85, 85, 82, 0.4);
   transition: opacity 1000ms ease, visibility 1000ms ease;
+
+  @include max-mobile {
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    overflow-y: scroll;
+  }
 }
 
 .is-hidden {
@@ -15,32 +23,45 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
   padding: 40px;
   border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  transform: scale(1) translate(-50%, -50%);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transform: perspective(400px) rotateY(0) scale(1);
   transition: transform 1000ms ease;
 
-  .secondary-btn {
-    display: block;
-    margin: 0 auto;
+  .backdrop.is-hidden & {
+    transform: perspective(400px) rotateY(45deg) scale(0.1);
   }
 
-  .backdrop.is-hidden & {
-    transform: scale(0) perspective(400px) rotateY(45deg);
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include min-tablet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include desctop {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
 .close-modal-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: 10px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +160,15 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 14px;
+  font-size: 8px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 11px;
+  }
+
+  @include desctop {
+    font-size: 14px;
+  }
 }
 
 .policy-icon {
@@ -166,4 +195,9 @@
   padding-left: 5px;
   color: $accent;
   text-decoration: underline;
+}
+
+.modal .secondary-btn {
+  display: block;
+  margin: 0 auto;
 }

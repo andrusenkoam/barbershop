@@ -1,15 +1,42 @@
 .about .container {
-  display: flex;
+  @include min-tablet {
+    display: flex;
+  }
 }
 
 .about-list {
-  display: flex;
-  flex-shrink: 0;
-  column-gap: 30px;
+  @include max-mobile {
+    display: none;
+  }
+
+  @include min-tablet {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  @include desctop {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+}
+
+.about-item {
+  @include max-tablet {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .about-content {
-  margin-left: 64px;
+  @include min-tablet {
+    margin-left: 30px;
+  }
+
+  @include desctop {
+    margin-left: 64px;
+  }
 }
 
 .about-pre-title {
@@ -20,16 +47,31 @@
 
 .about .secondary-title {
   margin-bottom: 20px;
+
+  @include max-tablet {
+    max-width: 330px;
+    font-size: 28px;
+    line-height: 1.14;
+  }
 }
 
 .about-after-title {
   @extend .after-title;
   margin-bottom: 20px;
+
+  @include max-tablet {
+    font-size: 16px;
+    line-height: 1.62;
+  }
 }
 
 .about-text {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.28px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 50px;
+  }
 }

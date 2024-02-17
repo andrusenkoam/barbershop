@@ -4,7 +4,6 @@
 
 .masters-pre-title {
   @extend %pre-title;
-  margin-bottom: 20px;
   color: $secondary-text-color;
 }
 
@@ -13,13 +12,23 @@
 }
 
 .masters-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include desctop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .masters-item {
-  flex-basis: calc((100% - 60px) / 3);
+  @include max-tablet {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+
+  @include desctop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .masters-cover-wrap {

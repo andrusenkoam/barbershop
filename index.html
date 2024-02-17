@@ -27,15 +27,79 @@
             </svg>
           </a>
           <ul class="header-list">
-            <li class="header-item"><a href="#about" class="header-link">Про нас</a></li>
-            <li class="header-item"><a href="#prices" class="header-link">Послуги та ціни</a></li>
-            <li class="header-item"><a href="#masters" class="header-link">Майстри</a></li>
-            <li class="header-item"><a href="#contacts" class="header-link">Контакти</a></li>
+            <li class="header-item">
+              <a href="#about" class="header-link">Про нас</a>
+            </li>
+            <li class="header-item">
+              <a href="#prices" class="header-link">Послуги та ціни</a>
+            </li>
+            <li class="header-item">
+              <a href="#masters" class="header-link">Майстри</a>
+            </li>
+            <li class="header-item">
+              <a href="#contacts" class="header-link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <div class="header-connect">
           <a href="tel:+380441111111" class="header-link">+38 044 111 11 11</a>
           <a href="#online" class="primary-btn">Онлайн-запис</a>
+        </div>
+        <button type="button" class="menu-open-btn">
+          <svg class="icon-menu-open" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-open-menu-btn"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-backdrop is-hidden">
+        <div class="mob-menu">
+          <button type="button" class="menu-close-btn">
+            <svg class="icon-menu-close" width="30" height="30">
+              <use href="./images/symbol-defs.svg#icon-close-menu-btn"></use>
+            </svg>
+          </button>
+          <div class="mob-menu-top">
+            <ul class="mob-menu-list">
+              <li class="mob-menu-item">
+                <a href="#about" class="mob-menu-link">Про нас</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#prices" class="mob-menu-link">Послуги та ціни</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#masters" class="mob-menu-link">Майстри</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#contacts" class="mob-menu-link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <a href="tel:+380441111111" class="mob-contact-link"
+              >+380441111111</a
+            >
+            <a href="#online" class="secondary-btn">Онлайн-запис</a>
+            <ul class="mob-soc-list">
+              <li class="mob-soc-item">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="mob-soc-link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="mob-soc-link"
+                  >YouTube</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -69,7 +133,8 @@
             <p lang="en" class="hero-pre-title">A hair salon for men in Kyiv</p>
             <h1 lang="en" class="hero-title primary-title">BarberShop</h1>
             <p class="hero-after-title">
-              Ми експерти в модних чоловічих стрижках. Працюємо швидко обережно та зі смаком.
+              Ми експерти в модних чоловічих стрижках. Працюємо швидко обережно
+              та зі смаком.
             </p>
           </div>
         </div>
@@ -79,33 +144,63 @@
         <div class="container">
           <ul class="about-list">
             <li class="about-item">
-              <img
-                src="./images/about/about-1.jpg"
-                alt="Барбер голить клієнта"
-                width="270"
-                height="430"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/about/about-desctop-1.jpg    1x,
+                    ./images/about/about-desctop-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about/about-tablet-1.jpg    1x,
+                    ./images/about/about-tablet-1-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/about/about-desctop-1.jpg"
+                  alt="Барбер голить клієнта"
+                />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                src="./images/about/about-2.jpg"
-                alt="Барбер голить клієнта"
-                width="270"
-                height="430"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/about/about-desctop-2.jpg    1x,
+                    ./images/about/about-desctop-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about/about-tablet-2.jpg    1x,
+                    ./images/about/about-tablet-2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/about/about-desctop-2.jpg"
+                  alt="Барбер голить клієнта"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about-content">
             <p class="about-pre-title">про нас</p>
             <h2 class="secondary-title">Кращий барбершоп твого міста</h2>
             <p class="about-after-title">
-              Якщо ти хочеш додати до свого образу більше впевненості - тобі точно до нас.
+              Якщо ти хочеш додати до свого образу більше впевненості - тобі
+              точно до нас.
             </p>
             <p class="about-text">
-              Ми команда, яка ніколи не зупиняється на досягнутому та жадає змін. І коли ти
-              потрапляєш до рук нашого майстра, вже ніколи не зможеш бути колишнім. Ми команда, яка
-              завжди з клієнтами "на одній хвилі". Тому ми завжди готові вдосконалювати кожного, хто
-              до нас приходить.
+              Ми команда, яка ніколи не зупиняється на досягнутому та жадає
+              змін. І коли ти потрапляєш до рук нашого майстра, вже ніколи не
+              зможеш бути колишнім. Ми команда, яка завжди з клієнтами "на одній
+              хвилі". Тому ми завжди готові вдосконалювати кожного, хто до нас
+              приходить.
             </p>
             <button type="button" class="secondary-btn" data-modal-open-primary>
               Онлайн-запис
@@ -156,12 +251,22 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="primary-btn" data-modal-open-secondary>Онлайн-запис</button>
+          <button type="button" class="primary-btn" data-modal-open-secondary>
+            Онлайн-запис
+          </button>
         </div>
       </section>
       <!-- Секція Резон -->
       <section class="section reasons">
         <div class="container">
+          <div class="reasons-content">
+            <p class="reasons-pre-title">Стара традиційна школа</p>
+            <h2 class="secondary-title">Чому приходять саме до нас?</h2>
+            <p class="after-title">
+              Про нас говорять тільки хороше. Але краще 1 раз побачити та
+              відчути, ніж 10 разів прочитати.
+            </p>
+          </div>
           <ul class="reasons-list">
             <li class="reasons-item">
               <span class="reasons-count">600</span>
@@ -180,14 +285,6 @@
               <p class="reasons-text">Подарунків постійним клієнтам</p>
             </li>
           </ul>
-          <div class="reasons-content">
-            <p class="reasons-pre-title">Стара традиційна школа</p>
-            <h2 class="secondary-title">Чому приходять саме до нас?</h2>
-            <p class="after-title">
-              Про нас говорять тільки хороше. Але краще 1 раз побачити та відчути, ніж 10 разів
-              прочитати.
-            </p>
-          </div>
         </div>
       </section>
       <!-- Секція Наші майстри -->
@@ -198,17 +295,40 @@
           <ul class="masters-list">
             <li class="masters-item">
               <div class="masters-cover-wrap">
-                <img
-                  src="./images/masters/master-1.jpg"
-                  alt="Майстер голить шию клієрту"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/masters/master-desctop-1.jpg    1x,
+                      ./images/masters/master-desctop-1-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-tablet-1.jpg    1x,
+                      ./images/masters/master-tablet-1-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-mobile-1.jpg    1x,
+                      ./images/masters/master-mobile-1-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/masters/master-desctop-1.jpg"
+                    alt="Майстер голить шию клієрту"
+                  />
+                </picture>
                 <p class="masters-cover-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic, quibusdam
-                  amet, quaerat voluptates enim iure beatae corporis placeat ad quidem praesentium
-                  illum! Nihil quaerat, ad vel corporis eaque modi vitae rem placeat quis!
-                  Consequuntur necessitatibus accusamus assumenda voluptatem quam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti hic, quibusdam amet, quaerat voluptates enim iure
+                  beatae corporis placeat ad quidem praesentium illum! Nihil
+                  quaerat, ad vel corporis eaque modi vitae rem placeat quis!
+                  Consequuntur necessitatibus accusamus assumenda voluptatem
+                  quam.
                 </p>
               </div>
               <h3 lang="en" class="masters-item-title">John Smith</h3>
@@ -246,17 +366,40 @@
             </li>
             <li class="masters-item">
               <div class="masters-cover-wrap">
-                <img
-                  src="./images/masters/master-2.jpg"
-                  alt="Майстер підстригає клієнта під насадку"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/masters/master-desctop-2.jpg    1x,
+                      ./images/masters/master-desctop-2-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-tablet-2.jpg    1x,
+                      ./images/masters/master-tablet-2-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-mobile-2.jpg    1x,
+                      ./images/masters/master-mobile-2-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/masters/master-desctop-2.jpg"
+                    alt="Майстер підстригає клієнта під насадку"
+                  />
+                </picture>
                 <p class="masters-cover-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic, quibusdam
-                  amet, quaerat voluptates enim iure beatae corporis placeat ad quidem praesentium
-                  illum! Nihil quaerat, ad vel corporis eaque modi vitae rem placeat quis!
-                  Consequuntur necessitatibus accusamus assumenda voluptatem quam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti hic, quibusdam amet, quaerat voluptates enim iure
+                  beatae corporis placeat ad quidem praesentium illum! Nihil
+                  quaerat, ad vel corporis eaque modi vitae rem placeat quis!
+                  Consequuntur necessitatibus accusamus assumenda voluptatem
+                  quam.
                 </p>
               </div>
               <h3 lang="en" class="masters-item-title">Michele Doe</h3>
@@ -294,17 +437,40 @@
             </li>
             <li class="masters-item">
               <div class="masters-cover-wrap">
-                <img
-                  src="./images/masters/master-3.jpg"
-                  alt="Майстер підстригає клієнту чубчик"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/masters/master-desctop-3.jpg    1x,
+                      ./images/masters/master-desctop-3-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-tablet-3.jpg    1x,
+                      ./images/masters/master-tablet-3-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/masters/master-mobile-3.jpg    1x,
+                      ./images/masters/master-mobile-3-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/masters/master-desctop-3.jpg"
+                    alt="Майстер підстригає клієнту чубчик"
+                  />
+                </picture>
                 <p class="masters-cover-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti hic, quibusdam
-                  amet, quaerat voluptates enim iure beatae corporis placeat ad quidem praesentium
-                  illum! Nihil quaerat, ad vel corporis eaque modi vitae rem placeat quis!
-                  Consequuntur necessitatibus accusamus assumenda voluptatem quam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti hic, quibusdam amet, quaerat voluptates enim iure
+                  beatae corporis placeat ad quidem praesentium illum! Nihil
+                  quaerat, ad vel corporis eaque modi vitae rem placeat quis!
+                  Consequuntur necessitatibus accusamus assumenda voluptatem
+                  quam.
                 </p>
               </div>
               <h3 lang="en" class="masters-item-title">Alan Black</h3>
@@ -348,44 +514,126 @@
         <div class="container">
           <!-- Прихований заголовок -->
           <h2 class="visually-hidden">Галерея</h2>
-          <p class="gallery-pre-title">Латинською мовою "БАРБА" значить "БОРОДА"</p>
+          <p class="gallery-pre-title">
+            Латинською мовою "БАРБА" значить "БОРОДА"
+          </p>
           <ul class="gallery-list">
             <li class="gallery-item">
-              <img
-                src="./images/gallery/gallery-1.jpg"
-                alt="Барбер підстригає клієнта під насадку"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/gallery-desctop-1.jpg    1x,
+                    ./images/gallery/gallery-desctop-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-tablet-1.jpg    1x,
+                    ./images/gallery/gallery-tablet-1-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-mobile-1.jpg    1x,
+                    ./images/gallery/gallery-mobile-1-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/gallery-desctop-1.jpg"
+                  alt="Барбер підстригає клієнта під насадку"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery/gallery-2.jpg"
-                alt="Барбер голить клієнта"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/gallery-desctop-2.jpg    1x,
+                    ./images/gallery/gallery-desctop-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-tablet-2.jpg    1x,
+                    ./images/gallery/gallery-tablet-2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-mobile-2.jpg    1x,
+                    ./images/gallery/gallery-mobile-2-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/gallery-desctop-2.jpg"
+                  alt="Барбер голить клієнта"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery/gallery-3.jpg"
-                alt="Барбер готує клієнта до гоління"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/gallery-desctop-3.jpg    1x,
+                    ./images/gallery/gallery-desctop-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-tablet-3.jpg    1x,
+                    ./images/gallery/gallery-tablet-3-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-mobile-3.jpg    1x,
+                    ./images/gallery/gallery-mobile-3-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/gallery-desctop-3.jpg"
+                  alt="Барбер готує клієнта до гоління"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery/gallery-4.jpg"
-                alt="Барбер підстригає клієнта"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/gallery-desctop-4.jpg    1x,
+                    ./images/gallery/gallery-desctop-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-tablet-4.jpg    1x,
+                    ./images/gallery/gallery-tablet-4-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-mobile-4.jpg    1x,
+                    ./images/gallery/gallery-mobile-4-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/gallery/gallery-desctop-4.jpg"
+                  alt="Барбер підстригає клієнта"
+                />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
-      <div class="contact-wrap">
+      <div class="contacts-wrap">
         <div class="container">
           <!-- Секція Онлфйн-запис -->
           <section class="section online" id="online">
@@ -426,29 +674,37 @@
           <!-- Секція Контакти -->
           <section class="section contacts" id="contacts">
             <h2 class="primary-title">Контакти</h2>
-            <address class="contacts-address">
-              <ul class="contacts-list">
-                <li class="contacts-item">
-                  <a
-                    href="https://maps.app.goo.gl/NFz16L4ibTXbNQV39"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="contacts-link icon-map"
-                    >вул. Васильківська, 7А Київ, 08132</a
-                  >
-                </li>
-                <li class="contacts-item">
-                  <a href="tel:+380441111111" class="contacts-link icon-phone">+38 044 111 11 11</a>
-                </li>
-                <li class="contacts-item">
-                  <a href="mailto:barbershop@email.com" class="contacts-link icon-mail underline"
-                    >barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <b class="contacts-time-title">Час роботи</b>
-            <p class="contacts-time-text">Щоденно з 9:00 до 22:00</p>
+            <div class="address-wrap">
+              <address class="contacts-address">
+                <ul class="contacts-list">
+                  <li class="contacts-item">
+                    <a
+                      href="https://maps.app.goo.gl/NFz16L4ibTXbNQV39"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="contacts-link icon-map"
+                      >вул. Васильківська, 7А Київ, 08132</a
+                    >
+                  </li>
+                  <li class="contacts-item">
+                    <a href="tel:+380441111111" class="contacts-link icon-phone"
+                      >+38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contacts-item">
+                    <a
+                      href="mailto:barbershop@email.com"
+                      class="contacts-link icon-mail underline"
+                      >barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="contacts-time-wrap">
+                <b class="contacts-time-title">Час роботи</b>
+                <p class="contacts-time-text">Щоденно з 9:00 до 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -570,5 +826,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

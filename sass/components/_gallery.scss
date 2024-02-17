@@ -5,11 +5,25 @@
 }
 
 .gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include min-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .gallery-item {
-  flex-basis: calc((100% - 90px) / 4);
+  @include max-mobile {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include min-tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include desctop {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }

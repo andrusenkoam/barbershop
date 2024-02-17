@@ -1,38 +1,100 @@
-.contact-wrap {
-  min-width: 1280px;
-  margin: 0 auto;
+.contacts-wrap {
   background-color: #191c26;
-  background-image: url(../images/contacts/contacts-bg.png);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: calc(50% - 15px);
+  background-position: bottom;
+  background-size: cover;
 
-  .container {
+  @media screen and (max-width: 480px) {
+    background-image: url(../images/contacts/contacts-bg-mobile.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/contacts-bg-mobile-2x.png);
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    background-image: url(../images/contacts/contacts-bg-tablet.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/contacts-bg-tablet-2x.png);
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    background-image: url(../images/contacts/contacts-bg-desctop.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/contacts-bg-desctop-2x.png);
+    }
+  }
+
+  @include desctop {
+    min-width: 1280px;
+    margin: 0 auto;
+    background-position: right;
+    background-size: calc(50% - 15px);
+  }
+}
+
+.contacts-wrap .container {
+  @include desctop {
     display: flex;
   }
 }
 
 .online {
-  width: calc(50% + 15px);
-  padding-right: 40px;
+  @include desctop {
+    width: calc(50% + 15px);
+    padding-right: 40px;
+  }
+}
 
-  .primary-title {
-    margin-bottom: 44px;
+.online .primary-title {
+  margin-bottom: 44px;
+
+  @media screen and (max-width: 350px) {
+    font-size: 32px;
+  }
+
+  @include max-mobile {
+    text-align: center;
   }
 }
 
 .online-inputs {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 44px;
+
+  @include min-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .online-field {
   position: relative;
-  width: 270px;
 
-  &:last-child {
-    width: 260px;
+  @include max-mobile {
+    &:first-child {
+      margin-bottom: 44px;
+    }
+  }
+
+  @include min-tablet {
+    width: 330px;
+  }
+
+  @include desctop {
+    width: 270px;
+
+    &:last-child {
+      width: 260px;
+    }
   }
 }
 
@@ -110,5 +172,12 @@
 
   &:focus::placeholder {
     color: #ffffff;
+  }
+}
+
+.online .primary-btn {
+  @include max-mobile {
+    display: block;
+    margin: 0 auto;
   }
 }
