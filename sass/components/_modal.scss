@@ -6,13 +6,13 @@
   height: 100%;
   background-color: rgba(85, 85, 82, 0.4);
   transition: opacity 1000ms ease, visibility 1000ms ease;
+  overflow: auto;
 
   @include max-mobile {
     padding-top: 93px;
     padding-right: 15px;
     padding-bottom: 94px;
     padding-left: 15px;
-    overflow-y: scroll;
   }
 }
 

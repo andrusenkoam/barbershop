@@ -102,10 +102,7 @@ body {
   color: #555555;
   font-family: "Open Sans", sans-serif;
 }
-body.modal-open {
-  overflow: hidden;
-}
-body.menu-open {
+body.modal-open, body.menu-open {
   overflow: hidden;
 }
 
@@ -820,10 +817,17 @@ a {
   max-width: 500px;
 }
 
+.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .reasons-list {
+    margin-top: -10px;
+  }
+}
 @media screen and (min-width: 768px) {
   .reasons-list {
-    display: flex;
-    flex-wrap: wrap;
     width: 370px;
   }
 }
@@ -840,8 +844,14 @@ a {
   background-color: #f7f7f7;
 }
 @media screen and (max-width: 767px) {
-  .reasons-item:not(:first-child) {
-    margin-top: 30px;
+  .reasons-item {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+  .reasons-item:nth-child(even) {
+    margin-top: 10px;
+  }
+  .reasons-item:nth-child(odd) {
+    margin-right: 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1366,6 +1376,7 @@ a {
   height: 100%;
   background-color: rgba(85, 85, 82, 0.4);
   transition: opacity 1000ms ease, visibility 1000ms ease;
+  overflow: auto;
 }
 @media screen and (max-width: 767px) {
   .backdrop {
@@ -1373,7 +1384,6 @@ a {
     padding-right: 15px;
     padding-bottom: 94px;
     padding-left: 15px;
-    overflow-y: scroll;
   }
 }
 
